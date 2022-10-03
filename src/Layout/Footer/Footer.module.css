@@ -1,0 +1,38 @@
+.wrapper {
+  background-color: var(--primary);
+  padding: 10px 250px 20px 250px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  color: var(--normal);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 5px 0;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: flex;
+}
+
+.img-pay img {
+  width: 15px;
+}
+
+.img-pay {
+  min-width: 50px;
+  max-height: 25px;
+  padding: 5px 0;
+  height: auto;
+}
+.title {
+  display: flex;
+}

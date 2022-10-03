@@ -1,0 +1,42 @@
+.wrapper {
+  padding: 0 250px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary);
+}
+
+.logo {
+  width: 178px;
+  height: 49px;
+}
+
+.search {
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  width: 443px;
+  height: 40px;
+  margin: 0 70px 0 20px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  flex: 1;
+}
+
+.searchBtn {
+  background-color: #fff;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.direct {
+  display: flex;
+  justify-items: flex-end;
+}
