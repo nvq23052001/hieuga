@@ -1,15 +1,34 @@
-import "./App.css";
+import { Fragment } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./Page/Home";
-import SignIn from "./Page/SignIn";
+import { publicRoutes } from "./router";
+import DefaultLayout from "./Layout/DefaultLayout";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/signin" element={<SignIn />}></Route>
+        {publicRoutes.map((route, index) => {
+          const Page = route.component;
+          let Layout = DefaultLayout;
+
+          if (route.layout) {
+            Layout = route.layout;
+          } else if (route.layout === null) {
+            Layout = Fragment;
+          }
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              element={
+                <Layout>
+                  <Page />
+                </Layout>
+              }
+            />
+          );
+        })}
       </Routes>
     </BrowserRouter>
   );
